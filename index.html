@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="analog-clock">
+        <div class="hand hour-hand" id="hourHand"></div>
+        <div class="hand minute-hand" id="minuteHand"></div>
+        <div class="hand second-hand" id="secondHand"></div>
+        <div class="center-dot"></div>
+    </div>
+
+    <div class="timer-container">
+        <h1>Exam Timer</h1>
+
+        <div id="date-display" class="date-display">
+            Loading date...
+        </div>
+
+        <div class="input-area">
+            <div class="input-group">
+                <label for="hours">Hours</label>
+                <input type="number" id="hours" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="minutes">Minutes</label>
+                <input type="number" id="minutes" min="0" max="59" value="10">
+            </div>
+            <div class="input-group">
+                <label for="seconds">Seconds</label>
+                <input type="number" id="seconds" min="0" max="59" value="0">
+            </div>
+        </div>
+
+        <div id="display" class="time-display">
+            00:10:00
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn start">Start</button>
+            <button id="pauseBtn" class="btn pause" disabled>Pause</button>
+            <button id="resetBtn" class="btn reset" disabled>Reset</button>
+        </div>
+
+        <div id="status" class="status-message"></div>
+
+        <audio id="alarmSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
